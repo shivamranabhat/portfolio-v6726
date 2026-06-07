@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivam Ranabhat — Info</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            serif: ['Georgia', 'serif'],
+          },
+          colors: {
+            warm: '#e8e6e0',
+            muted: '#7a7875',
+            canvas: '#0f0f0f',
+            surface: '#1a1a1a',
+            card: '#181818',
+          },
+          fontSize: {
+            '13': ['13px', '1.5'],
+            '15': ['15px', '1.65'],
+            '17': ['17px', '1.75'],
+            '18': ['18px', '1.85'],
+            '21': ['21px', '1.4'],
+            '24': ['24px', '1.3'],
+            '30': ['30px', '1.15'],
+            '34': ['34px', '1.1'],
+          },
+          screens: {
+            xs: '480px',
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="bg-canvas text-warm font-sans text-17 leading-[1.75] antialiased overflow-x-hidden px-0 md:px-24 lg:px-36">
+
+  <!-- ══════════════════════════════════════
+       NAV
+  ══════════════════════════════════════ -->
+  <nav id="navbar" class="fixed inset-x-0 top-0 z-50">
+
+    <!-- Main bar -->
+    <div class="w-full h-[68px] px-6 lg:px-20
+                flex items-center justify-between
+                bg-canvas/80 backdrop-blur-xl border-b border-white/[0.07]">
+
+      <!-- Brand -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0 transition-opacity hover:opacity-70">
+        <span class="w-8 h-8 bg-surface border border-white/[0.08] rounded-[6px]
+                     flex items-center justify-center
+                     text-[11px] font-semibold text-warm shrink-0">
+          SR
+        </span>
+        <span class="flex flex-col leading-tight">
+          <span class="text-[13px] font-medium text-warm">Shivam Ranabhat</span>
+          <span class="text-[11px] text-muted font-normal">Data Analyst</span>
+        </span>
+      </a>
+
+      <!-- Desktop pill tabs (hidden on mobile) -->
+      <div class="hidden md:flex gap-1 bg-surface border border-white/[0.08] rounded-full p-1">
+        <a href="index.html" class="text-[14px] text-muted px-6 py-[7px] rounded-full
+                  transition-colors duration-200 hover:text-warm">
+          Work
+        </a>
+        <a href="info.html" class="text-[14px] text-warm px-6 py-[7px] rounded-full bg-white/[0.1]">
+          Info
+        </a>
+      </div>
+
+      <!-- Desktop ext links (hidden on mobile) -->
+      <div class="hidden md:flex items-center gap-7 shrink-0">
+        <a href="https://www.linkedin.com/in/shivam-ranabhat-198a44239/" target="_blank" rel="noopener" class="text-[14px] text-muted transition-colors hover:text-warm
+                  inline-flex items-center gap-1.5">
+          LinkedIn
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" />
+          </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" class="text-[14px] text-muted transition-colors hover:text-warm
+                  inline-flex items-center gap-1.5">
+          Resume
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Hamburger button — visible only on mobile -->
+      <button id="hamburger" aria-label="Toggle menu" aria-expanded="false" class="md:hidden flex flex-col justify-center items-center
+                     gap-[5.5px] w-11 h-11 -mr-1.5 shrink-0 focus:outline-none">
+        <!-- Each bar is a styled span; JS toggles inline transform via data-bar -->
+        <span data-bar="0" class="block w-[22px] h-[1.5px] bg-warm rounded-full
+                     transition-all duration-[360ms] ease-[cubic-bezier(.77,0,.175,1)]
+                     origin-center"></span>
+        <span data-bar="1" class="block w-[22px] h-[1.5px] bg-warm rounded-full
+                     transition-all duration-[220ms] ease-in-out
+                     origin-center"></span>
+        <span data-bar="2" class="block w-[22px] h-[1.5px] bg-warm rounded-full
+                     transition-all duration-[360ms] ease-[cubic-bezier(.77,0,.175,1)]
+                     origin-center"></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer — JS sets inline opacity/transform/pointerEvents -->
+    <div id="mob-menu" aria-hidden="true" style="opacity:0; transform:translateY(-8px); pointer-events:none;
+                transition: opacity .28s ease, transform .32s cubic-bezier(.4,0,.2,1);" class="md:hidden absolute inset-x-0 top-full
+                bg-[rgba(10,10,10,0.97)] backdrop-blur-2xl
+                border-b border-white/[0.07]
+                px-8 pt-8 pb-12 flex flex-col gap-1">
+      <a href="index.html" class="text-[26px] font-light text-muted py-3 border-b border-white/[0.05]
+                transition-colors hover:text-warm">
+        Work
+      </a>
+      <a href="info.html" class="text-[26px] font-light text-warm py-3 border-b border-white/[0.05]">
+        Info
+      </a>
+      <div class="mt-7 flex flex-col gap-4">
+        <a href="https://www.linkedin.com/in/shivam-ranabhat-198a44239/" target="_blank" rel="noopener" class="text-[16px] text-muted transition-colors hover:text-warm
+                  inline-flex items-center gap-2">
+          LinkedIn
+          <svg width="11" height="11" viewBox="0 0 10 10" fill="none">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" />
+          </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" class="text-[16px] text-muted transition-colors hover:text-warm
+                  inline-flex items-center gap-2">
+          Resume
+          <svg width="11" height="11" viewBox="0 0 10 10" fill="none">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="w-full px-6 sm:px-10 lg:px-20 pt-[148px] pb-24">
+    <p id="hero-eyebrow" class="flex items-center gap-3 mb-8
+              text-[12px] text-muted uppercase tracking-[0.1em]
+              before:content-[''] before:block before:w-5 before:h-px
+              before:bg-muted before:shrink-0">
+      Info
+    </p>
+    <h1 id="hero-h1" class="text-[clamp(38px,6vw,88px)] font-normal leading-[1.08]
+               tracking-[-0.025em] text-warm">
+      Will dive in sea of data even<br class="hidden sm:block" />
+      <span class="font-serif italic text-muted"> after&nbsp;a long break.</span>
+    </h1>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       STORY GRID
+  ══════════════════════════════════════ -->
+  <section class="w-full px-6 sm:px-10 lg:px-20 pb-36">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 lg:gap-x-24 gap-y-16 lg:gap-y-20">
+
+      <!-- Photo 1 -->
+      <div class="reveal" style="opacity:0;transform:translateY(32px)">
+        <img src="./images/1st.jpg" alt="Shivam Ranabhat portrait"
+          class="w-full aspect-[2/2] object-cover object-top rounded-xl
+                    grayscale hover:grayscale-0 transition-all object-cover object-bottom duration-500 cursor-pointer" />
+        <p class="mt-3 text-[13px] text-muted tracking-wide">14th May, 2026</p>
+      </div>
+
+      <!-- Text 1 -->
+      <div class="reveal flex flex-col justify-center" style="opacity:0;transform:translateY(32px)">
+        <p class="text-[12px] text-muted uppercase tracking-[0.1em] mb-5">This is my story</p>
+        <p class="text-18 text-muted font-light leading-[1.85]">
+          alongside some flicks from my recent life in London to just get a piece of degree which has no role in
+          deciding my career.
+        </p>
+      </div>
+
+      <!-- Text 2 -->
+      <div class="reveal flex flex-col justify-center" style="opacity:0;transform:translateY(32px)">
+        <h3 class="text-24 font-medium text-warm tracking-tight mb-5">
+          My Hobby.
+        </h3>
+        <p class="text-18 text-muted font-light leading-[1.85]">
+          "I love exploring new places through a camera lens — chasing sunsets, dodging tourists, and capturing moments
+          that smack me with nostalgia so hard I need a therapy session and a snack. Nothing beats that adrenaline rush
+          when you’re one wrong turn away from becoming a viral ‘lost tourist’ meme.
+          Equally important? Trying on different clothing. I treat my closet like a chaotic experimental lab: one day
+          I’m a mysterious forest goblin in thrifted layers, the next I’m a walking fashion crime scene in patterns that
+          should probably be illegal in several countries. If the outfit doesn’t confuse at least three people, I’m not
+          doing it right."
+        </p>
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="reveal" style="opacity:0;transform:translateY(32px)">
+        <img src="images/2nd.jpeg" alt="Botany Bay Beach" class="w-full aspect-[2/2] object-cover rounded-xl
+                    grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" />
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="reveal" style="opacity:0;transform:translateY(32px)">
+        <img src="./images/4th.jpeg" alt="Kuwait Airline" class="w-full aspect-[4/3] object-cover rounded-xl
+                    grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" />
+      </div>
+
+      <!-- Text 3 -->
+      <div class="reveal flex flex-col justify-center" style="opacity:0;transform:translateY(32px)">
+        <h3 class="text-24 font-medium text-warm tracking-tight mb-5">But, I wanted more.</h3>
+        <p class="text-18 text-muted font-light leading-[1.85]">
+          I had to move beyond the trends, less policy constrained world
+          and make a much bigger impact.<br /><br />
+          I decided to go all-in and change the domain of my expertise and look out this world from the eye of an
+          analyst.
+        </p>
+      </div>
+
+      <!-- Text 4 -->
+      <!-- <div class="reveal flex flex-col justify-center" style="opacity:0;transform:translateY(32px)">
+        <h3 class="text-24 font-medium text-warm tracking-tight mb-5">This thing called UX?</h3>
+        <p class="text-18 text-muted font-light leading-[1.85]">
+          When the pandemic started I was at university running experiments,
+          making more and more websites for any brief that came my way.<br /><br />
+          Later I went into consulting at a smaller agency, fine-tuning my
+          skills, then designing at large scale.
+        </p>
+      </div> -->
+
+
+      <!-- Text 6 -->
+      <div class="reveal flex flex-col justify-center" style="opacity:0;transform:translateY(32px)">
+        <h3 class="text-24 font-medium text-warm tracking-tight mb-5">In my spare time,</h3>
+        <p class="text-18 text-muted font-light leading-[1.85]">
+          I enjoy music, cooking, and spending time in nature too.
+          Over the years , I've learned being focused, concentrated and disciplined throughout my family and
+          education.<br /><br />Thanks for stopping by!
+        </p>
+        <p class="mt-8 font-serif italic text-34 text-muted">Shivam</p>
+      </div>
+
+      <!-- Photo 6 -->
+      <div class="reveal" style="opacity:0;transform:translateY(32px)">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=900&q=80" alt="Camera" class="w-full aspect-[4/3] object-cover rounded-xl
+                    grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" />
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="border-t border-white/[0.07] mx-6 sm:mx-10 lg:mx-20" />
+
+  <!-- ══════════════════════════════════════
+       WORK EXPERIENCE
+  ══════════════════════════════════════ -->
+  <section class="w-full px-6 sm:px-10 lg:px-20 py-28">
+
+    <p class="flex items-center gap-3 mb-16 text-[12px] text-muted uppercase tracking-[0.1em]
+              before:content-[''] before:block before:w-5 before:h-px
+              before:bg-muted before:shrink-0">
+      Work experience
+    </p>
+
+    <!-- Discord -->
+    <div class="reveal grid grid-cols-1 md:grid-cols-[220px_1fr] gap-5 md:gap-20
+                py-10 border-t border-white/[0.07]" style="opacity:0;transform:translateY(32px)">
+      <p class="text-30 font-normal text-warm tracking-tight">Aspiring Analyst</p>
+      <div>
+        <p class="text-21 font-medium text-warm mb-3">On Loading...</p>
+        <p class="text-17 text-muted leading-[1.85] max-w-[60ch]">
+          On a break from tech stacks. Will continue the story soon. In the meantime, feel free to connect with me on
+          LinkedIn or check out my resume for more details about my background and experience.
+        </p>
+        <p class="text-[13px] text-muted mt-5 tracking-[0.08em]">'28 — .....</p>
+      </div>
+    </div>
+    <div class="reveal grid grid-cols-1 md:grid-cols-[220px_1fr] gap-5 md:gap-20
+                py-10 border-t border-white/[0.07]" style="opacity:0;transform:translateY(32px)">
+      <p class="text-30 font-normal text-warm tracking-tight">PHP Developer</p>
+      <div>
+        <p class="text-21 font-medium text-warm mb-3">Mid Level Laravel Developer</p>
+        <p class="text-17 text-muted leading-[1.85] max-w-[60ch]">
+          Worked on various web development projects, focusing on creating responsive and user-friendly interfaces to
+          meet business needs. Collaborated with my colleague Rabin Acharya to deliver high-quality solutions and enhance
+          user experience.
+        </p>
+        <p class="text-[13px] text-muted mt-5 tracking-[0.08em]">'22 — 26</p>
+      </div>
+    </div>
+
+  </section>
+
+  <hr class="border-t border-white/[0.07] mx-6 sm:mx-10 lg:mx-20" />
+
+  <!-- ══════════════════════════════════════
+       HUMANS
+  ══════════════════════════════════════ -->
+  <section class="w-full px-6 sm:px-10 lg:px-20 py-28">
+
+    <p class="flex items-center gap-3 mb-16 text-[12px] text-muted uppercase tracking-[0.1em]
+              before:content-[''] before:block before:w-5 before:h-px
+              before:bg-muted before:shrink-0">
+      Humans I've worked with
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+      <div class="reveal-sm py-7 pr-6 border-t border-white/[0.07]" style="opacity:0;transform:translateY(18px)">
+        <p class="text-[17px] font-medium mb-1.5">Rangin Creations</p>
+        <p class="text-15 text-muted">SEO & Tech Company</p>
+        <a href="https://www.rangin.com.np" class="text-15 text-muted" target="_blank" rel="noopener noreferrer">Web
+          ↗</a>
+      </div>
+      <div class="reveal-sm py-7 pr-6 border-t border-white/[0.07]" style="opacity:0;transform:translateY(18px)">
+        <p class="text-[17px] font-medium mb-1.5">Abhiyan Thapa</p>
+        <p class="text-15 text-muted">SEO & Media Specialist</p>
+        <a href="https://www.instagram.com/abhiyan_0" class="text-15 text-muted" target="_blank"
+          rel="noopener noreferrer">Instagram ↗</a>
+      </div>
+      <div class="reveal-sm py-7 pr-6 border-t border-white/[0.07]" style="opacity:0;transform:translateY(18px)">
+        <p class="text-[17px] font-medium mb-1.5">Rabin Acharya</p>
+        <p class="text-15 text-muted">Product Designer</p>
+        <a href="https://www.instagram.com/iam_rawbin" class="text-15 text-muted" target="_blank"
+          rel="noopener noreferrer">Instagram ↗</a>
+      </div>
+      <div class="reveal-sm py-7 pr-6 border-t border-white/[0.07]" style="opacity:0;transform:translateY(18px)">
+        <p class="text-[17px] font-medium mb-1.5">Krish Magar</p>
+        <p class="text-15 text-muted">Data Engineer</p>
+        <a href="https://www.instagram.com/_krishmagar" class="text-15 text-muted" target="_blank"
+          rel="noopener noreferrer">Instagram ↗</a>
+      </div>
+      <div class="reveal-sm py-7 pr-6 border-t border-white/[0.07]" style="opacity:0;transform:translateY(18px)">
+        <p class="text-[17px] font-medium mb-1.5">Kapil Pokhrel</p>
+        <p class="text-15 text-muted">Research Specialist</p>
+        <a href="https://www.instagram.com/kapeel_pokhrel" class="text-15 text-muted" target="_blank"
+          rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+
+      <div class="reveal-sm py-7 pr-6 border-t border-white/[0.07]" style="opacity:0;transform:translateY(18px)">
+        <p class="text-[17px] font-medium mb-1.5">Suraj Pandey</p>
+        <p class="text-15 text-muted">SEO Specialist</p>
+        <a href="https://www.instagram.com/suu.razz" class="text-15 text-muted" target="_blank"
+          rel="noopener noreferrer">Instagram ↗</a>
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="w-full px-6 sm:px-10 lg:px-20 py-12
+                 border-t border-white/[0.07]
+                 flex flex-col sm:flex-row items-start sm:items-center
+                 justify-between gap-8">
+    <div class="flex items-center gap-3">
+      <span class="w-6 h-6 bg-surface border border-white/[0.08] rounded-[5px]
+                   flex items-center justify-center
+                   text-[12px] font-semibold text-warm shrink-0">SR</span>
+      <p class="text-15 text-muted">© 2026 Shivam Ranabhat. All Rights Reserved.</p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-x-12">
+      <div>
+        <p class="text-[11px] text-muted uppercase tracking-[0.07em] mb-2">Pages</p>
+        <div class="flex flex-col gap-1.5">
+          <a href="info.html" class="text-15 text-muted transition-colors hover:text-warm">Info</a>
+          <a href="index.html" class="text-15 text-muted transition-colors hover:text-warm">Work</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-[11px] text-muted uppercase tracking-[0.07em] mb-2">Connect</p>
+        <div class="flex flex-col gap-1.5">
+          <a href="https://www.linkedin.com/in/shivam-ranabhat-198a44239/" target="_blank"
+            class="text-15 text-muted transition-colors hover:text-warm inline-flex items-center gap-1">
+            LinkedIn
+            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+              <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" />
+            </svg>
+          </a>
+          <a href="#" target="_blank"
+            class="text-15 text-muted transition-colors hover:text-warm inline-flex items-center gap-1">
+            Resume
+            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+              <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

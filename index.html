@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivam Ranabhat — Work</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            serif: ['Georgia', 'serif'],
+          },
+          colors: {
+            warm: '#e8e6e0',
+            muted: '#7a7875',
+            canvas: '#0f0f0f',
+            surface: '#1a1a1a',
+            card: '#181818',
+          },
+          fontSize: {
+            '13': ['13px', '1.5'],
+            '15': ['15px', '1.65'],
+            '17': ['17px', '1.75'],
+            '18': ['18px', '1.85'],
+            '21': ['21px', '1.4'],
+            '24': ['24px', '1.3'],
+            '30': ['30px', '1.15'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="bg-canvas text-warm font-sans text-17 leading-[1.75] antialiased overflow-x-hidden">
+
+  <!-- ══════════════════════════════════════
+       NAV
+  ══════════════════════════════════════ -->
+  <nav id="navbar" class="fixed inset-x-0 top-0 z-50">
+
+    <div class="w-full h-[68px] px-6 lg:px-20
+                flex items-center justify-between
+                bg-canvas/80 backdrop-blur-xl border-b border-white/[0.07]">
+
+      <!-- Brand -->
+      <a href="index.html" class="flex items-center gap-3 shrink-0 transition-opacity hover:opacity-70">
+        <span class="w-8 h-8 bg-surface border border-white/[0.08] rounded-[6px]
+                     flex items-center justify-center
+                     text-[11px] font-semibold text-warm shrink-0">
+          SR
+        </span>
+        <span class="flex flex-col leading-tight">
+          <span class="text-[13px] font-medium text-warm">Shivam Ranabhat</span>
+          <span class="text-[11px] text-muted font-normal">Data Analyst</span>
+        </span>
+      </a>
+
+      <!-- Desktop pill tabs -->
+      <div class="hidden md:flex gap-1 bg-surface border border-white/[0.08] rounded-full p-1">
+        <a href="index.html" class="text-[14px] text-warm px-6 py-[7px] rounded-full bg-white/[0.1]">
+          Work
+        </a>
+        <a href="info.html" class="text-[14px] text-muted px-6 py-[7px] rounded-full
+                  transition-colors duration-200 hover:text-warm">
+          Info
+        </a>
+      </div>
+
+      <!-- Desktop ext links -->
+      <div class="hidden md:flex items-center gap-7 shrink-0">
+        <a href="#" target="_blank" rel="noopener" class="text-[14px] text-muted transition-colors hover:text-warm
+                  inline-flex items-center gap-1.5">
+          LinkedIn
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" />
+          </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" class="text-[14px] text-muted transition-colors hover:text-warm
+                  inline-flex items-center gap-1.5">
+          Resume
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="hamburger" aria-label="Toggle menu" aria-expanded="false" class="md:hidden flex flex-col justify-center items-center
+                     gap-[5.5px] w-11 h-11 -mr-1.5 shrink-0 focus:outline-none">
+        <span data-bar="0" class="block w-[22px] h-[1.5px] bg-warm rounded-full origin-center
+                     transition-all duration-[360ms] ease-[cubic-bezier(.77,0,.175,1)]"></span>
+        <span data-bar="1" class="block w-[22px] h-[1.5px] bg-warm rounded-full origin-center
+                     transition-all duration-[220ms] ease-in-out"></span>
+        <span data-bar="2" class="block w-[22px] h-[1.5px] bg-warm rounded-full origin-center
+                     transition-all duration-[360ms] ease-[cubic-bezier(.77,0,.175,1)]"></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div id="mob-menu" aria-hidden="true" style="opacity:0; transform:translateY(-8px); pointer-events:none;
+                transition: opacity .28s ease, transform .32s cubic-bezier(.4,0,.2,1);" class="md:hidden absolute inset-x-0 top-full
+                bg-[rgba(10,10,10,0.97)] backdrop-blur-2xl
+                border-b border-white/[0.07]
+                px-8 pt-8 pb-12 flex flex-col gap-1">
+      <a href="index.html" class="text-[26px] font-light text-warm py-3 border-b border-white/[0.05]">
+        Work
+      </a>
+      <a href="info.html" class="text-[26px] font-light text-muted py-3 border-b border-white/[0.05]
+                transition-colors hover:text-warm">
+        Info
+      </a>
+      <div class="mt-7 flex flex-col gap-4">
+        <a href="https://www.linkedin.com/in/shivam-ranabhat-198a44239/" target="_blank" rel="noopener" class="text-[16px] text-muted transition-colors hover:text-warm
+                  inline-flex items-center gap-2">
+          LinkedIn
+          <svg width="11" height="11" viewBox="0 0 10 10" fill="none">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" />
+          </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" class="text-[16px] text-muted transition-colors hover:text-warm
+                  inline-flex items-center gap-2">
+          Resume
+          <svg width="11" height="11" viewBox="0 0 10 10" fill="none">
+            <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO — browser frame
+  ══════════════════════════════════════ -->
+  <section class="relative w-full min-h-screen flex flex-col px-6 md:px-24 lg:px-36 pt-[148px] pb-24">
+
+    <!-- Browser frame fills remaining viewport -->
+    <div id="work-browser" class="flex-1 flex flex-col bg-card border border-white/[0.08] rounded-t-2xl overflow-hidden"
+      style="border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+
+      <!-- Chrome bar -->
+      <div class="flex items-center gap-3 px-5 py-3.5 bg-[#111] border-b border-white/[0.07] shrink-0">
+        <div class="flex gap-1.5 shrink-0">
+          <span class="w-[11px] h-[11px] rounded-full bg-[#ff5f56]"></span>
+          <span class="w-[11px] h-[11px] rounded-full bg-[#ffbd2e]"></span>
+          <span class="w-[11px] h-[11px] rounded-full bg-[#27c93f]"></span>
+        </div>
+        <div class="bg-white/[0.05] rounded px-3 h-[22px]
+                    flex items-center text-[11px] text-muted w-full max-w-xs">
+          shivamranabhat.com.np
+        </div>
+      </div>
+
+      <!-- Content — vertically centred inside remaining space -->
+      <div class="flex-1 flex flex-col justify-center px-8 sm:px-14 lg:px-16 py-16 relative">
+        <h1 id="work-h1" class="text-[clamp(34px,5.5vw,72px)] font-normal
+                   leading-[1.08] tracking-[-0.03em] text-warm">
+          I craft web apps &amp;<br />
+          <span class="font-serif italic text-warm/25">explore tech stacks</span>
+        </h1>
+        <div class="mt-8 sm:text-right">
+          <p class="text-[16px] text-warm font-normal">Full Stack Web Developer</p>
+          <p class="text-15 text-muted">Currently on a break.</p>
+        </div>
+
+        <!-- Bottom gradient fade — blends card into canvas bg -->
+        <div class="absolute inset-x-0 bottom-0 h-40 pointer-events-none"
+          style="background: linear-gradient(to bottom, transparent, #0f0f0f);"></div>
+      </div>
+    </div>
+
+    <!-- Bouncing arrow — sits at bottom of viewport, above the cards -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
+      <span class="text-[11px] text-muted uppercase tracking-[0.12em]">Projects</span>
+      <svg id="scroll-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none" class="text-muted"
+        style="animation: bounceDown 1.6s ease-in-out infinite;">
+        <path d="M11 3v16M4 13l7 7 7-7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </div>
+
+    <!-- Keyframe injected via Tailwind config — defined inline since Tailwind CDN supports arbitrary values -->
+    <style>
+      @keyframes bounceDown {
+
+        0%,
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+
+        50% {
+          transform: translateY(10px);
+          opacity: 0.45;
+        }
+      }
+    </style>
+  </section>
+  
+
+  <!-- ══════════════════════════════════════
+       PROJECT CARDS
+  ══════════════════════════════════════ -->
+  <div class="w-full pb-28 flex flex-col gap-6 px-6 md:px-24 lg:px-36">
+
+    <!-- ── Avain Pass ── -->
+    <article class="proj-card group bg-card border border-white/[0.08] rounded-2xl overflow-hidden
+                    hover:bg-[#1f1f1f] hover:border-white/[0.14]
+                    transition-all duration-300 cursor-pointer" style="opacity:0;transform:translateY(32px)">
+      <div class="flex items-start justify-between gap-5 px-7 sm:px-8 pt-7 pb-6">
+        <div>
+          <div class="flex items-center flex-wrap gap-3 mb-2">
+            <span class="text-[18px] font-medium text-warm tracking-tight">Avain Pass</span>
+            <span class="text-[12px] text-muted bg-white/[0.05] px-3 py-1 rounded-full">Pokhara, '26</span>
+          </div>
+          <p class="text-15 text-muted">Manage all event in a single platform.</p>
+        </div>
+        <div class="w-9 h-9 shrink-0 rounded-full border border-white/[0.08]
+                    flex items-center justify-center
+                    group-hover:bg-white/[0.08] group-hover:border-white/20
+                    group-hover:scale-110 transition-all duration-200">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="text-muted">
+            <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.3" />
+          </svg>
+        </div>
+      </div>
+      <div class="mx-4 sm:mx-5 mb-5 p-4 rounded-xl border border-white/[0.07] overflow-hidden bg-[#0a0a0a]">
+        <div class="flex items-center gap-2.5 px-4 py-2.5 bg-[#111] border-b border-white/[0.06]">
+          <div class="flex gap-1.5 shrink-0">
+            <span class="w-2 h-2 rounded-full bg-[#ff5f56]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#ffbd2e]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#27c93f]"></span>
+          </div>
+          <div class="bg-white/[0.04] rounded px-2.5 h-[18px]
+                      flex items-center text-[10px] text-muted max-w-[260px] w-full">
+            https://avianpass.com
+          </div>
+        </div>
+        <img src="https://www.androidauthority.com/wp-content/uploads/2023/01/Stadia-Bluetooth-pairing-mode.jpg"
+          alt="Stadia Bluetooth UI" class="w-full max-h-[600px] object-cover object-top block"
+          onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&q=80'" />
+      </div>
+    </article>
+
+    <!-- ── Catwalk Club Pokhara ── -->
+    <article class="proj-card group bg-card border border-white/[0.08] rounded-2xl overflow-hidden
+                    hover:bg-[#1f1f1f] hover:border-white/[0.14]
+                    transition-all duration-300 cursor-pointer" style="opacity:0;transform:translateY(32px)">
+      <div class="flex items-start justify-between gap-5 px-7 sm:px-8 pt-7 pb-6">
+        <div>
+          <div class="flex items-center flex-wrap gap-3 mb-2">
+            <span class="text-[18px] font-medium text-warm tracking-tight">Catwalk Club Pokhara</span>
+            <span class="text-[12px] text-muted bg-white/[0.05] px-3 py-1 rounded-full">Pokhara, '26</span>
+          </div>
+          <p class="text-15 text-muted">A famous night club in Pokhara.</p>
+        </div>
+        <div class="w-9 h-9 shrink-0 rounded-full border border-white/[0.08]
+                    flex items-center justify-center
+                    group-hover:bg-white/[0.08] group-hover:border-white/20
+                    group-hover:scale-110 transition-all duration-200">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="text-muted">
+            <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.3" />
+          </svg>
+        </div>
+      </div>
+      <div class="mx-4 sm:mx-5 mb-5 p-4 rounded-xl border border-white/[0.07] overflow-hidden bg-[#0a0a0a]">
+        <div class="flex items-center gap-2.5 px-4 py-2.5 bg-[#111] border-b border-white/[0.06]">
+          <div class="flex gap-1.5 shrink-0">
+            <span class="w-2 h-2 rounded-full bg-[#ff5f56]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#ffbd2e]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#27c93f]"></span>
+          </div>
+          <div class="bg-white/[0.04] rounded px-2.5 h-[18px]
+                      flex items-center text-[10px] text-muted max-w-[260px] w-full">
+            catwalkpokhara.com
+          </div>
+        </div>
+        <img src="./images/Catwalk.png" alt="Catwalk Club Pokhara"
+          class="w-full max-h-[600px] object-cover object-top block" />
+      </div>
+    </article>
+    <article class="proj-card group bg-card border border-white/[0.08] rounded-2xl overflow-hidden
+                    hover:bg-[#1f1f1f] hover:border-white/[0.14]
+                    transition-all duration-300 cursor-pointer" style="opacity:0;transform:translateY(32px)">
+      <div class="flex items-start justify-between gap-5 px-7 sm:px-8 pt-7 pb-6">
+        <div>
+          <div class="flex items-center flex-wrap gap-3 mb-2">
+            <span class="text-[18px] font-medium text-warm tracking-tight">Care Nepal</span>
+            <span class="text-[12px] text-muted bg-white/[0.05] px-3 py-1 rounded-full">Pokhara, '26</span>
+          </div>
+          <p class="text-15 text-muted">A healthcare initiative where people can access quality medical care including products & services.</p>
+        </div>
+        <div class="w-9 h-9 shrink-0 rounded-full border border-white/[0.08]
+                    flex items-center justify-center
+                    group-hover:bg-white/[0.08] group-hover:border-white/20
+                    group-hover:scale-110 transition-all duration-200">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="text-muted">
+            <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.3" />
+          </svg>
+        </div>
+      </div>
+      <div class="mx-4 sm:mx-5 mb-5 p-4 rounded-xl border border-white/[0.07] overflow-hidden bg-[#0a0a0a]">
+        <div class="flex items-center gap-2.5 px-4 py-2.5 bg-[#111] border-b border-white/[0.06]">
+          <div class="flex gap-1.5 shrink-0">
+            <span class="w-2 h-2 rounded-full bg-[#ff5f56]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#ffbd2e]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#27c93f]"></span>
+          </div>
+          <div class="bg-white/[0.04] rounded px-2.5 h-[18px]
+                      flex items-center text-[10px] text-muted max-w-[260px] w-full">
+            carenepal365.com
+          </div>
+        </div>
+        <img src="./images/care-nepal.png" alt="Care Nepal"
+          class="w-full max-h-[600px] object-cover object-top block" />
+      </div>
+    </article>
+    <article class="proj-card group bg-card border border-white/[0.08] rounded-2xl overflow-hidden
+                    hover:bg-[#1f1f1f] hover:border-white/[0.14]
+                    transition-all duration-300 cursor-pointer" style="opacity:0;transform:translateY(32px)">
+      <div class="flex items-start justify-between gap-5 px-7 sm:px-8 pt-7 pb-6">
+        <div>
+          <div class="flex items-center flex-wrap gap-3 mb-2">
+            <span class="text-[18px] font-medium text-warm tracking-tight">Nepal Mountain Bike</span>
+            <span class="text-[12px] text-muted bg-white/[0.05] px-3 py-1 rounded-full">Pokhara, '26</span>
+          </div>
+          <p class="text-15 text-muted">A tour company offering mountain guide & biking experiences in Pokhara.</p>
+        </div>
+        <div class="w-9 h-9 shrink-0 rounded-full border border-white/[0.08]
+                    flex items-center justify-center
+                    group-hover:bg-white/[0.08] group-hover:border-white/20
+                    group-hover:scale-110 transition-all duration-200">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="text-muted">
+            <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.3" />
+          </svg>
+        </div>
+      </div>
+      <div class="mx-4 sm:mx-5 mb-5 p-4 rounded-xl border border-white/[0.07] overflow-hidden bg-[#0a0a0a]">
+        <div class="flex items-center gap-2.5 px-4 py-2.5 bg-[#111] border-b border-white/[0.06]">
+          <div class="flex gap-1.5 shrink-0">
+            <span class="w-2 h-2 rounded-full bg-[#ff5f56]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#ffbd2e]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#27c93f]"></span>
+          </div>
+          <div class="bg-white/[0.04] rounded px-2.5 h-[18px]
+                      flex items-center text-[10px] text-muted max-w-[260px] w-full">
+            nepalmountainbike.com
+          </div>
+        </div>
+        <img src="./images/npl.png" alt="Nepal Mountain Bike"
+          class="w-full max-h-[600px] object-cover object-top block" />
+      </div>
+    </article>
+    <article class="proj-card group bg-card border border-white/[0.08] rounded-2xl overflow-hidden
+                    hover:bg-[#1f1f1f] hover:border-white/[0.14]
+                    transition-all duration-300 cursor-pointer" style="opacity:0;transform:translateY(32px)">
+      <div class="flex items-start justify-between gap-5 px-7 sm:px-8 pt-7 pb-6">
+        <div>
+          <div class="flex items-center flex-wrap gap-3 mb-2">
+            <span class="text-[18px] font-medium text-warm tracking-tight">Next Gen Ltd</span>
+            <span class="text-[12px] text-muted bg-white/[0.05] px-3 py-1 rounded-full">Hongkong, '25</span>
+          </div>
+          <p class="text-15 text-muted">A hongkong based company delivering innovative and customized solutions.</p>
+        </div>
+        <div class="w-9 h-9 shrink-0 rounded-full border border-white/[0.08]
+                    flex items-center justify-center
+                    group-hover:bg-white/[0.08] group-hover:border-white/20
+                    group-hover:scale-110 transition-all duration-200">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="text-muted">
+            <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.3" />
+          </svg>
+        </div>
+      </div>
+      <div class="mx-4 sm:mx-5 mb-5 p-4 rounded-xl border border-white/[0.07] overflow-hidden bg-[#0a0a0a]">
+        <div class="flex items-center gap-2.5 px-4 py-2.5 bg-[#111] border-b border-white/[0.06]">
+          <div class="flex gap-1.5 shrink-0">
+            <span class="w-2 h-2 rounded-full bg-[#ff5f56]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#ffbd2e]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#27c93f]"></span>
+          </div>
+          <div class="bg-white/[0.04] rounded px-2.5 h-[18px]
+                      flex items-center text-[10px] text-muted max-w-[260px] w-full">
+            nextgenerationltd.com
+          </div>
+        </div>
+        <img src="./images/nxtgen.png" alt="Next Gen Ltd"
+          class="w-full max-h-[600px] object-cover object-top block" />
+      </div>
+    </article>
+    <article class="proj-card group bg-card border border-white/[0.08] rounded-2xl overflow-hidden
+                    hover:bg-[#1f1f1f] hover:border-white/[0.14]
+                    transition-all duration-300 cursor-pointer" style="opacity:0;transform:translateY(32px)">
+      <div class="flex items-start justify-between gap-5 px-7 sm:px-8 pt-7 pb-6">
+        <div>
+          <div class="flex items-center flex-wrap gap-3 mb-2">
+            <span class="text-[18px] font-medium text-warm tracking-tight">Gyankunj EF</span>
+            <span class="text-[12px] text-muted bg-white/[0.05] px-3 py-1 rounded-full">Pokhara, '24</span>
+          </div>
+          <p class="text-15 text-muted">A educational institution aimed at providing quality learning opportunities in Pokhara.</p>
+        </div>
+        <div class="w-9 h-9 shrink-0 rounded-full border border-white/[0.08]
+                    flex items-center justify-center
+                    group-hover:bg-white/[0.08] group-hover:border-white/20
+                    group-hover:scale-110 transition-all duration-200">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="text-muted">
+            <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.3" />
+          </svg>
+        </div>
+      </div>
+      <div class="mx-4 sm:mx-5 mb-5 p-4 rounded-xl border border-white/[0.07] overflow-hidden bg-[#0a0a0a]">
+        <div class="flex items-center gap-2.5 px-4 py-2.5 bg-[#111] border-b border-white/[0.06]">
+          <div class="flex gap-1.5 shrink-0">
+            <span class="w-2 h-2 rounded-full bg-[#ff5f56]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#ffbd2e]"></span>
+            <span class="w-2 h-2 rounded-full bg-[#27c93f]"></span>
+          </div>
+          <div class="bg-white/[0.04] rounded px-2.5 h-[18px]
+                      flex items-center text-[10px] text-muted max-w-[260px] w-full">
+            gyankunjef.com
+          </div>
+        </div>
+        <img src="./images/gyankunj.png" alt="Gyankunj EF"
+          class="w-full max-h-[600px] object-cover object-top block" />
+      </div>
+    </article>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="w-full px-6 sm:px-10 lg:px-20 py-12
+                 border-t border-white/[0.07]
+                 flex flex-col sm:flex-row items-start sm:items-center
+                 justify-between gap-8">
+    <div class="flex items-center gap-3">
+      <span class="w-6 h-6 bg-surface border border-white/[0.08] rounded-[5px]
+                   flex items-center justify-center
+                   text-[12px] font-semibold text-warm shrink-0">SR</span>
+      <p class="text-15 text-muted">© 2026 Shivam Ranabhat. All Rights Reserved.</p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-x-12">
+      <div>
+        <p class="text-[11px] text-muted uppercase tracking-[0.07em] mb-2">Pages</p>
+        <div class="flex flex-col gap-1.5">
+          <a href="info.html" class="text-15 text-muted transition-colors hover:text-warm">Info</a>
+          <a href="work.html" class="text-15 text-muted transition-colors hover:text-warm">Work</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-[11px] text-muted uppercase tracking-[0.07em] mb-2">Connect</p>
+        <div class="flex flex-col gap-1.5">
+          <a href="https://www.linkedin.com/in/shivam-ranabhat-198a44239/" target="_blank"
+            class="text-15 text-muted transition-colors hover:text-warm inline-flex items-center gap-1">
+            LinkedIn
+            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+              <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" />
+            </svg>
+          </a>
+          <a href="#" target="_blank"
+            class="text-15 text-muted transition-colors hover:text-warm inline-flex items-center gap-1">
+            Resume
+            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+              <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.2" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
